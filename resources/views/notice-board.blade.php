@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="notice-board">
         <h2>お知らせ</h2>
         <div class="news-container">
             <div class="news-item">

@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="information">
         <h2>フィリピン留学情報</h2>
         <div class="filter-menu">
             <button class="active">すべて</button>
