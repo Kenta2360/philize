@@ -18,6 +18,15 @@ Route::get('/bulletin-board', function () {
 Route::get('/board-detail', function () {
     return view('board-detail');
 });
+Route::get('/notice-board', function () {
+    return view('notice-board');
+});
+Route::get('/notice-detail', function () {
+    return view('notice-detail');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
 
 Auth::routes();
 

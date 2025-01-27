@@ -52,10 +52,10 @@
                                 <a href="#" class="nav-link">体験談</a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link">お知らせ</a>
+                                <a href="/notice-board" class="nav-link">お知らせ</a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link">お問い合わせ</a>
+                                <a href="/contact" class="nav-link">お問い合わせ</a>
                             </li>
                             {{-- @if (Route::has('login'))
                                 <li class="nav-item">
