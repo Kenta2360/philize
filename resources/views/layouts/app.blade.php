@@ -41,23 +41,20 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
+                        <li>
+                            <a href="/bulletin-board" class="nav-link">掲示板</a>
+                        </li>
+                        <li>
+                            <a href="/information" class="nav-link">情報ページ</a>
+                        </li>
+                        <li>
+                            <a href="/notice-board" class="nav-link">お知らせ</a>
+                        </li>
+                        <li>
+                            <a href="/contact" class="nav-link">お問い合わせ</a>
+                        </li>
                         @guest
-                            <li>
-                                <a href="/bulletin-board" class="nav-link">掲示板</a>
-                            </li>
-                            <li>
-                                <a href="/information" class="nav-link">情報ページ</a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link">体験談</a>
-                            </li>
-                            <li>
-                                <a href="/notice-board" class="nav-link">お知らせ</a>
-                            </li>
-                            <li>
-                                <a href="/contact" class="nav-link">お問い合わせ</a>
-                            </li>
-                            {{-- @if (Route::has('login'))
+                            @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
@@ -67,25 +64,25 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
-                            @endif --}}
-                            {{-- <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                            @endif
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li> --}}
-                        {{-- @else --}}
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
                         @endguest
                     </ul>
                 </div>

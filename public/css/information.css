@@ -1,6 +1,6 @@
-.container{
+.information{
     width: 1200px;
-    margin: 3rem;
+    margin: 3rem auto;
     padding: 2rem;
     background-color: white;
     border-radius: 16px;

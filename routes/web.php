@@ -27,6 +27,9 @@ Route::get('/notice-detail', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('/contact-complete', function () {
+    return view('contact-complete');
+});
 
 Auth::routes();
 

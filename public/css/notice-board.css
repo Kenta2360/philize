@@ -1,4 +1,4 @@
-.container{
+.notice-board{
     padding: 3rem 2rem;
     max-width: 800px;
     margin: 2rem auto;
@@ -7,7 +7,7 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.container h2{
+.notice-board h2{
     color: #1c2833;
     font-size: 1.8rem;
     font-weight: bold;
