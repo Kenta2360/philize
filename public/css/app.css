@@ -1,0 +1,36 @@
+html body{
+    background-color: #f8f5f2;
+}
+
+.navbar{
+    background-color: #1c2833;
+}
+
+.brand{
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    color: white;
+}
+
+.navbar-nav a{
+    color: #dcdde1;
+    margin-right: 1rem;
+}
+
+.navbar-nav a:hover{
+    color: #f39c12;
+}
+
+
+
+footer{
+    background-color: hsl(209, 29%, 15%);
+    height: 5rem;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
