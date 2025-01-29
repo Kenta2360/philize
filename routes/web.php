@@ -30,6 +30,9 @@ Route::get('/contact', function () {
 Route::get('/contact-complete', function () {
     return view('contact-complete');
 });
+Route::get('/create-board', function () {
+    return view('create-board');
+});
 
 Auth::routes();
 
