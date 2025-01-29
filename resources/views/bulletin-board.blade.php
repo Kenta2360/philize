@@ -9,7 +9,7 @@
 @section('content')
     <div class="content">
         <h2>掲示板</h2>
-        <a href="#" class="post-btn">新しい投稿を作成</a>
+        <a href="/create-board" class="post-btn">新しい投稿を作成</a>
 
         <div class="board-container">
             <a href="/board-detail" class="text-decoration-none">
