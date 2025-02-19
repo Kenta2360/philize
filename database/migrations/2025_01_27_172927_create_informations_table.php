@@ -14,13 +14,15 @@ return new class extends Migration
         Schema::create('informations', function (Blueprint $table) {
             $table->id();
             $table->string('title', 255);
-            $table->text('content');
-            $table->unsignedBigInteger('user_id');
+            $table->text('intro');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('region_id');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('category_id')->references('id')->on('info_categories');
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('region_id')->references('id')->on('regions');
         });
     }
 

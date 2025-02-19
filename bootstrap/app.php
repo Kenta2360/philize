@@ -11,7 +11,18 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->append([
+            \Illuminate\Http\Middleware\TrustHosts::class,
+            \Illuminate\Http\Middleware\TrustProxies::class,
+            \Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance::class,
+            \Illuminate\Http\Middleware\ValidatePostSize::class
+        ]);
+
+        $middleware->alias([
+            'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
+            'admin' => \App\Http\Middleware\AdminMiddleware::class,
+            'guest' => \Illuminate\Auth\Middleware\RedirectIfAuthenticated::class
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

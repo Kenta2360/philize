@@ -1,4 +1,4 @@
-.contact{
+main .contact{
     padding: 3rem 2rem;
     max-width: 800px;
     margin: 2rem auto;
@@ -86,5 +86,46 @@
 }
 
 .back-link:hover{
+    background-color: #d48900;
+}
+
+
+
+main .completed-contact {
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.completed-contact h2 {
+    color: #1c2833;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 0.5rem;
+}
+
+.completed-contact p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.completed-contact .back-link {
+    display: inline-block;
+    background-color: #f39c12;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.completed-contact .back-link:hover {
     background-color: #d48900;
 }

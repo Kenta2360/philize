@@ -1,4 +1,4 @@
-.content{
+main .bulletin-board{
     padding: 3rem 2rem;
     max-width: 1200px;
     margin: 2rem auto;
@@ -7,7 +7,7 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.content h2{
+.bulletin-board h2{
     color: #1c2833;
     font-size: 1.8rem;
     font-weight: bold;
@@ -33,6 +33,39 @@
     background-color: #e67e22;
     transform: translateY(-3px);
 }
+
+.filter-menu{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 1rem;
+}
+
+.filter-menu a{
+    background-color: transparent;
+    color: #1f2a36;
+    padding: 0.8rem 2rem;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.filter-menu a.active::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #f39c12;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+
 
 .board-container{
     margin-top: 2rem;
@@ -64,7 +97,7 @@
     color: #5d6d7e;
 }
 
-.content-detail{
+main .content-detail{
     padding: 3rem 2rem;
     max-width: 800px;
     margin: 2rem auto;
@@ -170,7 +203,7 @@
 }
 
 
-.create-board{
+main .create-board{
     padding: 3rem 2rem;
     max-width: 800px;
     margin: 2rem auto;
@@ -199,7 +232,8 @@
     margin-bottom: 0.5rem;
 }
 
-input, textarea{
+
+input, select, textarea{
     width: 100%;
     padding: 0.8rem;
     font-size: 1rem;
@@ -232,4 +266,75 @@ textarea{
 {
     background-color: #e67e22;
     transform: translateY(-3px);
+}
+
+
+.region {
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.region h2{
+    color: #1c2833;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.region input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.submit-button {
+    background-color: #f39c12;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #d48900;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: #ccc;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.back-link:hover {
+    background-color: #999;
 }

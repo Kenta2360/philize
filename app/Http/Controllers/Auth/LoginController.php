@@ -4,9 +4,13 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+
+
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -25,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/login';
 
     /**
      * Create a new controller instance.
@@ -36,5 +40,16 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
         $this->middleware('auth')->only('logout');
+    }
+
+
+
+
+    public function logout(Request $request){
+        Auth::logout();               // ログアウト処理
+        $request->session()->invalidate();   // セッションを無効化
+        $request->session()->regenerateToken(); // CSRFトークンを再生成
+
+        return redirect('/home');     // ログアウト後のリダイレクト先
     }
 }
