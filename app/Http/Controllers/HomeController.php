@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BulletinBoard;
+use App\Models\Information;
+use App\Models\Notice;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['index']);
     }
 
     /**
@@ -21,8 +24,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        return view('home');
+    public function index(){
+        $all_information = Information::latest()->get();
+        $all_boards = BulletinBoard::latest()->get();
+        $all_notices = Notice::latest()->get();
+        return view('home', compact('all_information', 'all_boards', 'all_notices'));
     }
+
 }
