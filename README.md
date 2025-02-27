@@ -1,66 +1,70 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Philize - フィリピン留学情報プラットフォーム
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 🚀 プロジェクト概要
+**Philize** は、フィリピン留学を検討している人や、現在留学中の人向けの総合情報プラットフォームです。
 
-## About Laravel
+> "Philippines" + "Rise" ＝ フィリピンで学び、成長し、自分を高める
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### **🎯 目的**
+- フィリピン留学に関する **正確で実用的な情報** を提供
+- **留学生同士が交流できる場** を提供し、不安や疑問を解消
+- 語学だけでなく、異文化交流・キャリアアップのチャンスを広げる
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📌 機能一覧
+✅ **留学生活情報**（物価・気候・治安・SIM・交通・食事など）  
+✅ **留学手続きガイド**（ビザ・SSP・ACR I-Card 取得方法）  
+✅ **掲示板 & Q&A**（留学生同士の質問・交流）  
+✅ **サイトメンテナンス & お知らせ**  
+✅ **お問い合わせフォーム**（サイト管理者への問い合わせ）  
+✅ **ホームページ**（サイトの概要・主要コンテンツへのリンク）
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠 使用技術
+### **バックエンド**
+- Laravel 11 (PHP 8.2)
+- MySQL
 
-## Learning Laravel
+### **フロントエンド**
+- Bootstrap 5 + カスタムCSS
+- JavaScript (最低限)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### **その他**
+- Laravel UI (ユーザー認証)
+- gmailへのお問い合わせメール送信
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 💻 環境構築手順
+1. **リポジトリをクローン**
+   ```sh
+   git clone https://github.com/your-username/philize.git
+   cd philize
+   ```
+2. **依存パッケージをインストール**
+   ```sh
+   composer install
+   npm install
+   ```
+3. **環境変数を設定**
+   ```sh
+   cp .env.example .env
+   php artisan key:generate
+   ```
+4. **データベースを設定 & マイグレーション実行**
+   ```sh
+   php artisan migrate
+   ```
+5. **サーバーを起動**
+   ```sh
+   php artisan serve
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🔥 今後の開発予定
+- **UIの改善**（モバイル対応・デザイン調整）
+- **機能追加**（イベント情報の共有、留学経験者のインタビュー記事）
+- **SEO対策**（検索エンジン最適化）
 
-## Laravel Sponsors
+## 📩 お問い合わせ
+開発者: **Kenta**  
+GitHub: [your-username](https://github.com/your-username)  
+Email: your-email@example.com  
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+**© 2025 Philize. All rights reserved.**
