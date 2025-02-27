@@ -63,8 +63,8 @@
 
 ## 📩 お問い合わせ
 開発者: **Kenta**  
-GitHub: [your-username](https://github.com/your-username)  
-Email: your-email@example.com  
+GitHub: [Kenta2360](https://github.com/Kenta2360) 
+Email:  k.nojiri0514@gmail.com  
 
 ---
 **© 2025 Philize. All rights reserved.**
